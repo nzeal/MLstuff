@@ -1,0 +1,15 @@
+name: Actions Workflow
+on:
+  push:
+
+jobs:
+  run-github-actions:
+    name: Run Github Actions
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Flake8 
+        run: |
+            pip3 install flake8
+            flake8 . --count --max-line-length=120 --show-source --statistics 
