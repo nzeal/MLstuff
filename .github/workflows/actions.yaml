@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-        run: |
-          flake8 . --count --max-line-length=120 --show-source --statistics 
+      - name: Flake8 
+        run: flake8 . --count --max-line-length=120 --show-source --statistics 
