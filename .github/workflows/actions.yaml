@@ -3,7 +3,7 @@ on:
   push:
 
 jobs:
-  Run Github Actions:
+  Run-Github-Actions:
     runs-on: ubuntu-20.04
     timeout-minutes: 5
     steps:
@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Update pip
-        run: pip isntall -U pip setuptools wheel
+        run: pip install -U pip setuptools wheel
       - name: Flake8
         run: |
             pip3 install flake8
