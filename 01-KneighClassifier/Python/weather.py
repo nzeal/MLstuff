@@ -10,7 +10,7 @@ class Weather():
         self._path = path
         self._dataset = pd.read_csv(self._path, parse_dates=True, index_col=0)
         self._header = ['Humidity3pm', 'Pressure3pm', 'Cloud3pm', 'RainTomorrow']
-        self._rfig = plt.figure(figsize=(4, 4), dpi=160)
+        self._rfig = plt.figure(figsize=(8, 4), dpi=160)
         self._knn = KNeighborsClassifier(n_neighbors=5)
         self._t = [0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2]
         self._epoch = 100
@@ -42,7 +42,7 @@ class Weather():
         for s in self._t:
             scores = []
             for i in range(1, self._epoch):
-                print(i)
+                #print(i)
                 X_train, X_test, y_train, y_test = train_test_split(self.X,
                                                                     self.y,
                                                                     test_size=1-s)
