@@ -42,14 +42,12 @@ class anaylsis():
 
     def visualSet(self):
         plt.figure(figsize=(8, 4), dpi=200)
-        cmap = plt.get_cmap("viridis")
-        font2 = {'family': 'serif', 'color': 'black', 'size': 15}
+        font = {'family': 'serif', 'color': 'black', 'size': 15}
         m1 = plt.scatter(self.X_train, self.y_train, s=10)
         m2 = plt.scatter(self.X_test, self.y_test, s=10)
         m3 = plt.plot(self.X, self.y_pred_line, c="forestgreen", linewidth=1, label="Prediction")
-        # Axis, legend
-        plt.xlabel('Years of Experience', fontdict=font2)
-        plt.ylabel('Salary', fontdict=font2)
+        plt.xlabel('Years of Experience', fontdict=font)
+        plt.ylabel('Salary', fontdict=font)
         plt.legend(['Training set', 'Test set', 'Best fit'])
         plt.tight_layout()
         plt.savefig('LinearRegression.png')
