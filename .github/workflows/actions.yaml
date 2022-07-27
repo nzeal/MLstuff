@@ -22,7 +22,7 @@ jobs:
       - name: Mypy
         run: |
           pip install -U mypy
-          mypy --config-file mypy.ini .
+          mypy --config-file mypy.ini --exclude 03-LogisticRegression/main.py .
       - name: Pytest
         run: |
           pip install -U pytest
