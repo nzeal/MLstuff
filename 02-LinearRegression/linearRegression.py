@@ -1,3 +1,8 @@
+"""
+Credit to Patrick Loeber
+"""
+
+
 import numpy as np
 
 class LinearRegression:
