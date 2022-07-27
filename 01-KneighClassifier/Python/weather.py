@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import argparse
 
+
 class Weather():
     def __init__(self, path: str):
         self._path = path
@@ -42,7 +43,6 @@ class Weather():
         for s in self._t:
             scores = []
             for i in range(1, self._epoch):
-                #print(i)
                 X_train, X_test, y_train, y_test = train_test_split(self.X,
                                                                     self.y,
                                                                     test_size=1-s)
