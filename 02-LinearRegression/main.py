@@ -43,9 +43,9 @@ class anaylsis():
     def visualSet(self):
         plt.figure(figsize=(8, 4), dpi=200)
         font = {'family': 'serif', 'color': 'black', 'size': 15}
-        m1 = plt.scatter(self.X_train, self.y_train, s=10)
-        m2 = plt.scatter(self.X_test, self.y_test, s=10)
-        m3 = plt.plot(self.X, self.y_pred_line, c="forestgreen", linewidth=1, label="Prediction")
+        plt.scatter(self.X_train, self.y_train, s=10)
+        plt.scatter(self.X_test, self.y_test, s=10)
+        plt.plot(self.X, self.y_pred_line, c="forestgreen", linewidth=1, label="Prediction")
         plt.xlabel('Years of Experience', fontdict=font)
         plt.ylabel('Salary', fontdict=font)
         plt.legend(['Training set', 'Test set', 'Best fit'])
