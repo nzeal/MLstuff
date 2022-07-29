@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import argparse
@@ -19,10 +18,7 @@ class anaylsis():
         self.y = df.iloc[:, -1].values
 
     def splitdata(self):
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X,
-                                                                                self.y, 
-                                                                                test_size=1/3,
-                                                                                random_state=0)
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.X, self.y, test_size=1/3, random_state=0)
                                                                                 
     def featureScaling(self):
         self.sc = StandardScaler()
