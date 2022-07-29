@@ -1,5 +1,8 @@
 import numpy as np
 
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
 class LogisticRegression:
     def __init__(self, learning_rate=0.001, n_iters=1000):
         self.lr = learning_rate
@@ -30,9 +33,6 @@ class LogisticRegression:
 
     def predict(self, X):
         linear_model = np.dot(X, self.weights) + self.bias
-        y_predicted = self._sigmoid(linear_model)
+        y_predicted = sigmoid(linear_model)
         y_predicted_cls = [1 if i > 0.5 else 0 for i in y_predicted]
         return np.array(y_predicted_cls)
-
-    def _sigmoid(self, x):
-        return 1 / (1 + np.exp(-x))
