@@ -1,6 +1,8 @@
 name: Actions Workflow
 on:
   push:
+    paths-ignore:
+      - "README"
 
 jobs:
   Run-Github-Actions:
