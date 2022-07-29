@@ -23,7 +23,8 @@ jobs:
         run: |
           pip install -U mypy
           for f in $$(find ./ -name "*.py"); do
-              mypy --python-version 3.8 --show-error-context --platform 'linux' "$$f"
+            echo "$f"
+            # mypy --python-version 3.8 --show-error-context --platform 'linux' "$$f"
           done
           # mypy --config-file mypy.ini --exclude 03-LogisticRegression/main.py .
       - name: Pytest
