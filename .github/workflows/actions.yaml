@@ -42,4 +42,4 @@ jobs:
       - run: |
           pip install -U pip setuptools wheel
           pip install pip-audit
-          pip-audit requirments.txt
+          pip-audit requirements.txt
