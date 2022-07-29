@@ -22,7 +22,7 @@ jobs:
       - name: Mypy
         run: |
           pip install -U mypy
-          for f in $$(find ./ -name "*.py"); do
+          for f in $(find ./ -name "*.py"); do
             echo "$f"
             # mypy --python-version 3.8 --show-error-context --platform 'linux' "$$f"
           done
