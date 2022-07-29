@@ -2,7 +2,7 @@ name: Actions Workflow
 on:
   push:
     paths-ignore:
-      - "README"
+      - "README.md"
 
 jobs:
   Run-Github-Actions:
