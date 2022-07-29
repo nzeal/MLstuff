@@ -30,30 +30,12 @@ class anaylsis():
         self.X_test = self.sc.transform(self.X_test)
         self.regressor = LogisticRegression(learning_rate=0.0001, n_iters=1000)
         self.regressor.fit(self.X_train, self.y_train)
-        y_pred = self.regressor.predict(self.X_test)
+        self.y_pred = self.regressor.predict(self.X_test)
 
     def confusionMatrics(self):
         confusion_matrix(self.y_test, self.y_pred)
         accuracy_score(self.y_test, self.y_pred)
         return confusion_matrix, accuracy_score
-
-    def visualSet(self):
-        plt.figure(figsize=(8, 4), dpi=160)
-        font = {'family': 'serif', 'color': 'black', 'size': 15}
-        X_set, y_set = self.sc.inverse_transform(self.X_train), self.y_train
-        
-        X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 10, stop = X_set[:, 0].max() + 10, step = 0.25),
-                     np.arange(start = X_set[:, 1].min() - 1000, stop = X_set[:, 1].max() + 1000, step = 0.25))
-        plt.contourf(X1, X2, self.regressor.predict(self.sc.transform(np.array([X1.ravel(), X2.ravel()]).T)).reshape(X1.shape), alpha = 0.75, cmap = ListedColormap(('red', 'green')))
-        plt.xlim(X1.min(), X1.max())
-        plt.ylim(X2.min(), X2.max())
-        for i, j in enumerate(np.unique(y_set)):
-            plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1], c = ListedColormap(('red', 'green'))(i), label = j)
-        plt.title('Logistic Regression (Training set)')
-        plt.xlabel('Age')
-        plt.ylabel('Estimated Salary')
-        plt.legend()
-        plt.show()
 
 
 def main(args):
@@ -61,7 +43,6 @@ def main(args):
     ana.findData()
     ana.splitdata()
     ana.featureScaling()
-    ana.visualSet()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
