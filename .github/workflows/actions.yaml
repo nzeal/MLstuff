@@ -25,7 +25,6 @@ jobs:
           for f in $(find ./ -name "*.py"); do
             mypy --python-version 3.8 --show-error-context --platform 'linux' "$f"
           done
-          # mypy --config-file mypy.ini --exclude 03-LogisticRegression/main.py .
       - name: Pytest
         run: |
           pip install -U pytest
