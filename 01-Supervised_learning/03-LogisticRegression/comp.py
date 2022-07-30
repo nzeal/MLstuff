@@ -1,7 +1,7 @@
 """
 This is other analysis
 """
-import mglearn
+#import mglearn
 import matplotlib.pyplot as plt
 import pandas as pd
 import argparse
