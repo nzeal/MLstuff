@@ -23,11 +23,11 @@ The course file structure
 │   └── 03-Logistic Regression
 ├── Section3: Unsupervised Learning
 │   ├── 01-intro
-│   └── 12-outro
+│   └── 02-coming... 
 ├── Section4: Reinforcement Learning
 │   ├── 01-intro
-│   ├── 02-API
-│   └── 15-outro
+│   ├── 02-coming...
+│   └── 03-coming...
 └── Section5: What's next
 ```
 
