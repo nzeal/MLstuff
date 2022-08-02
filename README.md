@@ -28,7 +28,7 @@ The course file structure
 │   ├── 01-intro
 │   ├── 02-API
 │   └── 15-outro
-└── 07- What's next
+└── Section5: What's next
 ```
 
 <br>
