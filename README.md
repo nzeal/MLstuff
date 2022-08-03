@@ -10,10 +10,11 @@
 
 <br>
 
-### Course structure
-The course file structure
+### Objective
 
 ```
+structure 
+├── Section0: Data
 ├── Section1: Data Preprocessing
 │   ├── 01-Data Preprocesing in Python
 │   ├── 02-Data Preprocessing in Julia
