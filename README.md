@@ -14,22 +14,33 @@
 
 ```
 structure 
-├── Section0: Data
-├── Section1: Data Preprocessing
-│   ├── 01-Data Preprocesing in Python
-│   ├── 02-Data Preprocessing in Julia
-├── Section2: Supervised Learning
-│   ├── 01-Regression
-│   ├── 02-K-Nearest Neighbors (K-NN)
-│   └── 03-Logistic Regression
-├── Section3: Unsupervised Learning
-│   ├── 01-intro
-│   └── 02-coming... 
-├── Section4: Reinforcement Learning
-│   ├── 01-intro
-│   ├── 02-coming...
-│   └── 03-coming...
-└── Section5: What's next
+.
+├── DSMLwithJulia
+│   ├── Section0
+│   │   ├── 00Dataprocessing
+│   │   └── 01Dataprocessing_visulation
+│   └── Section1
+│       └── 01SimpleRegression
+├── DSMLwithPython
+│   ├── Section0
+│   │   ├── Data.csv
+│   │   ├── Salary_Data.csv
+│   │   ├── house_prices.csv
+│   │   ├── weather.csv
+│   │   └── weatherHistory.csv
+│   ├── Section1
+│   ├── Section2
+│   │   ├── 01-LinearRegression
+│   │   ├── 02-LogisticRegression
+│   │   ├── 03-KneighClassifier
+│   │   └── theory_behind.md
+│   ├── Section3
+│   │   └── theory_behind.md
+│   └── Section4
+│       └── theory_behind.md
+├── README.md
+├── mypy.ini
+└── requirements.txt
 ```
 
 <br>
